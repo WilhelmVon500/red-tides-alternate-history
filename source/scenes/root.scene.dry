@@ -71,14 +71,14 @@ Q.reformists_resigned = 0;
 
 // inter-party relations
 Q.z_relation = 50;
-Q.kpd_relation = 25;
 Q.ddp_relation = 60;
 Q.spd_relation = 35;
 Q.dnvp_relation = 10;
+Q.kpd_relation = 10;
 Q.dap_relation = 0;
 
 Q.kpd_leader = "Liebknecht";
-Q.z_leader = "Brüning";
+Q.z_leader = "Trimborn";
 Q.dap_leader = "Drexler";
 
 // hmm... maybe we can play nice with Hindenburg???
@@ -88,6 +88,7 @@ Q.hindenburg_enabled = 0;
 
 
 Q.nlp_prussia = 1;
+Q.prussia_leader = "Braun";
 Q.prussia_leader_party = "SPD";
 
 // The array of forces - paramilitary groups
