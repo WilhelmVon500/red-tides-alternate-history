@@ -39,11 +39,11 @@ Reichstag composition:
 
 {!<span class="tooltip-text" title="Communist Party of Germany">!}**KPD**{!</span>!}: [+ kpd_seats +] ([+ kpd_r +]%)
 
-[? if uspd_exist: {!<span class="tooltip-text" title="Independent Social Democratic Party of Germany">!}**USPD**{!</span>!}: [+ uspd_seats +] ([+ uspd_r +]%) ?]
+[? if uspd_exist: {!<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #D47B9B;">!}**USPD**{!</span>!}: [+ uspd_seats +] ([+ uspd_r +]%) ?]
 
 {!<span class="tooltip-text" title="Social Democratic Party of Germany">!}**SPD**{!</span>!}: [+ spd_seats +] ([+ spd_r +]%)
 
-{!<span class="tooltip-text" title="Progressive People's Party" style="color: #B8996F;">!}**FVP**{!</span>!}: [+ fvp_seats +] ([+ fvp_r +]%)
+{!<span class="tooltip-text" title="Progressive People's Party" style="color: #FFD800;">!}**FVP**{!</span>!}: [+ fvp_seats +] ([+ fvp_r +]%)
 
 <span class="tooltip-text" title="Center Party + Bavarian People's Party"><span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span></span>: [+ z_seats +] ([+ z_r +]%)
 
@@ -82,11 +82,11 @@ Reichsbank President: [+ reichsbank_president +] ([?if reichsbank_president_part
 
 {!<span class="tooltip-text" title="Communist Party of Germany">!}**KPD**{!</span>!}: [+ kpd_relation : relationships +]
 
-[? if uspd_exist: {!<span class="tooltip-text" title="Independent Social Democratic Party of Germany">!}**USPD**{!</span>!}: [+ uspd_relation : relationships +] ?]
+[? if uspd_exist: {!<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #D47B9B;">!}**USPD**{!</span>!}: [+ uspd_relation : relationships +] ?]
 
 {!<span class="tooltip-text" title="Social Democratic Party of Germany">!}**SPD**{!</span>!}: [+ spd_relation : relationships +]
 
-{!<span class="tooltip-text" title="Progressive People's Party">!}**FVP**{!</span>!}: [+ fvp_relation : relationships +]
+{!<span class="tooltip-text" title="Progressive People's Party" style="color: #FFD800;">!}**FVP**{!</span>!}: [+ fvp_relation : relationships +]
 
 {!<span class="tooltip-text" title="Center Party" style="color: #000000;">!}**Z**{!</span>!}: [+ z_relation : relationships +]
 
@@ -177,11 +177,11 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 **KPD**: [+ kpd_votes +]%
 
-[? if uspd_exist: **USPD**: [+ uspd_votes +]% ?]
+[? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ uspd_votes +]% ?]
 
 **SPD**: [+ spd_votes +]%
 
-**FVP**: [+ fvp_votes +]%
+<span style="color: #FFD800;">**FVP**</span>: [+ fvp_votes +]%
 
 <span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span>: [+ z_votes +]%
 
@@ -197,16 +197,16 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 **Detailed results for each demographic**
 
-Workers: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ workers_nlp_display +]%, **KPD**: [+ workers_kpd_display +]%, [? if uspd_exist: **USPD**: [+ workers_uspd_display +]%, ?]**SPD**: [+ workers_spd_display +]%, **FVP**: [+ workers_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ workers_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ workers_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ workers_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ workers_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ workers_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ workers_other_display +]%
+Workers: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ workers_nlp_display +]%, **KPD**: [+ workers_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ workers_uspd_display +]%, ?]**SPD**: [+ workers_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ workers_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ workers_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ workers_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ workers_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ workers_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ workers_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ workers_other_display +]%
 
-New Middle Class: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ new_middle_nlp_display +]%, **KPD**: [+ new_middle_kpd_display +]%, [? if uspd_exist: **USPD**: [+ new_middle_uspd_display +]%, ?]**SPD**: [+ new_middle_spd_display +]%, **FVP**: [+ new_middle_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ new_middle_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ new_middle_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ new_middle_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ new_middle_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ new_middle_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ new_middle_other_display +]%
+New Middle Class: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ new_middle_nlp_display +]%, **KPD**: [+ new_middle_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ new_middle_uspd_display +]%, ?]**SPD**: [+ new_middle_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ new_middle_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ new_middle_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ new_middle_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ new_middle_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ new_middle_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ new_middle_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ new_middle_other_display +]%
 
-Old Middle Class: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ old_middle_nlp_display +]%, **KPD**: [+ old_middle_kpd_display +]%, [? if uspd_exist: **USPD**: [+ old_middle_uspd_display +]%, ?]**SPD**: [+ old_middle_spd_display +]%, **FVP**: [+ old_middle_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ old_middle_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ old_middle_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ old_middle_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ old_middle_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ old_middle_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ old_middle_other_display +]%
+Old Middle Class: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ old_middle_nlp_display +]%, **KPD**: [+ old_middle_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ old_middle_uspd_display +]%, ?]**SPD**: [+ old_middle_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ old_middle_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ old_middle_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ old_middle_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ old_middle_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ old_middle_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ old_middle_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ old_middle_other_display +]%
 
-Rural: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ rural_nlp_display +]%, **KPD**: [+ rural_kpd_display +]%, [? if uspd_exist: **USPD**: [+ rural_uspd_display +]%, ?]**SPD**: [+ rural_spd_display +]%, **FVP**: [+ rural_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ rural_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ rural_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ rural_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ rural_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ rural_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ rural_other_display +]%
+Rural: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ rural_nlp_display +]%, **KPD**: [+ rural_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ rural_uspd_display +]%, ?]**SPD**: [+ rural_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ rural_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ rural_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ rural_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ rural_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ rural_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ rural_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ rural_other_display +]%
 
-Unemployed: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ unemployed_nlp_display +]%, **KPD**: [+ unemployed_kpd_display +]%, [? if uspd_exist: **USPD**: [+ unemployed_uspd_display +]%, ?]**SPD**: [+ unemployed_spd_display +]%, **FVP**: [+ unemployed_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ unemployed_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ unemployed_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ unemployed_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ unemployed_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ unemployed_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ unemployed_other_display +]%
+Unemployed: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ unemployed_nlp_display +]%, **KPD**: [+ unemployed_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ unemployed_uspd_display +]%, ?]**SPD**: [+ unemployed_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ unemployed_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ unemployed_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ unemployed_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ unemployed_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ unemployed_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ unemployed_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ unemployed_other_display +]%
 
-Catholics: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ catholics_nlp_display +]%, **KPD**: [+ catholics_kpd_display +]%, [? if uspd_exist: **USPD**: [+ catholics_uspd_display +]%, ?]**SPD**: [+ catholics_spd_display +]%, **FVP**: [+ catholics_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ catholics_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ catholics_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ catholics_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ catholics_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ catholics_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ catholics_other_display +]%
+Catholics: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ catholics_nlp_display +]%, **KPD**: [+ catholics_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ catholics_uspd_display +]%, ?]**SPD**: [+ catholics_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ catholics_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ catholics_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ catholics_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ catholics_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ catholics_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ catholics_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ catholics_other_display +]%
 
 Support for the Republic: [+ pro_republic_disp +]%
