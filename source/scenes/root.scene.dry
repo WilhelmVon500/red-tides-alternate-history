@@ -234,14 +234,14 @@ Q.unemployed_other = 5;
 Q.catholics_kpd = 0;
 Q.catholics_uspd = 5;
 Q.catholics_spd = 15;
-Q.catholics_fvp = 0;
+Q.catholics_fvp = 2;
 Q.catholics_z = 57;
 Q.catholics_nlp = 2;
 Q.catholics_wp = 0;
 Q.catholics_rlb = 0;
-Q.catholics_dnvp = 10;
+Q.catholics_dnvp = 15;
 Q.catholics_dap = 0;
-Q.catholics_other = 11;
+Q.catholics_other = 4;
 
 
 // Current Reichstag composition
