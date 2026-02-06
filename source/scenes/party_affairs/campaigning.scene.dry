@@ -1,0 +1,68 @@
+title: Campaigning
+new-page: true
+on-arrival: month_actions += 1
+is-card: true
+card-image: img/poster_0.jpg
+frequency: 100
+tags: party_affairs
+
+= Campaigning
+
+Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
+
+- @workers: The urban working class.
+- @new_middle: The "new middle class" of government employees and white-collar workers, our traditional support base.
+- @old_middle: The "old middle class" of small independent businessmen and artisans.
+- @rural: Rural workers and small farmers, who have felt neglected by us in the past.
+- @unemployed: The unemployed.
+- @catholics: Catholics, who typically support the <span style="color: #000000;">Center Party</span>.
+- @root: We either don't want to or cannot campaign right now.
+- @easy_discard
+
+@workers
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; workers_nlp += 2*(1-dissent); workers_nlp -= 1 if unemployed >= 15; workers_nlp -= 0.5 if unemployed >= 25;
+
+We have increased our campaigning among the workers.
+
+@new_middle
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; new_middle_nlp += 6*(1-dissent);
+
+We have increased our campaigning among the new middle class.
+
+@old_middle
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; old_middle_nlp += 7*(1-dissent);
+
+We have increased our campaigning among the old middle class.
+
+@rural
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; rural_nlp += 3*(1-dissent);
+
+We have increased our campaigning among farmers.
+
+@unemployed
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; unemployed_nlp += 1*(1-dissent);
+
+We have increased our campaigning among the unemployed.
+
+@catholics
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; catholics_nlp += 2*(1-dissent);
+
+We have increased our campaigning among Catholics.
