@@ -21,7 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
+Q.year = 1922;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -71,7 +71,7 @@ Q.reformists_resigned = 0;
 
 // inter-party relations
 Q.z_relation = 50;
-Q.ddp_relation = 60;
+Q.fvp_relation = 60;
 Q.spd_relation = 35;
 Q.dnvp_relation = 10;
 Q.kpd_relation = 10;
@@ -82,13 +82,11 @@ Q.z_leader = "Trimborn";
 Q.dap_leader = "Drexler";
 
 Q.nlp_leader = "Stresemann";
+Q.nlp_name = "NLP";
 Q.nlp_color = "#98C22C";
 
-
-// hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
-// whether or not hindenburg can dismiss the government.
-Q.hindenburg_enabled = 0;
+Q.uspd_exist = 1;
+Q.wp_exist = 0;
 
 
 Q.nlp_prussia = 1;
@@ -96,11 +94,10 @@ Q.prussia_leader = "Braun";
 Q.prussia_leader_party = "SPD";
 
 // The array of forces - paramilitary groups
-// Number of members in 1928 (in thousands)
+// Number of members in 1922 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
 Q.rb_strength = 2000;
 Q.rb_militancy = 0.01;
-Q.women_in_rb = 0;
 Q.rb_banned = 0;
 Q.sh_strength = 500;
 Q.sh_militancy = 0.5;
@@ -152,72 +149,76 @@ Q.workers = 48; // industry and trade
 Q.old_middle = 13; // "old mittelstand" 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
 Q.new_middle = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-Q.unemployed = 8.6;
+Q.unemployed = 4.1;
 Q.catholics = 30;
 
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
-Q.inflation = 2.9;
+Q.inflation = 0.0;
 
-// economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
-Q.economic_growth = 4.4;
+Q.economic_growth = 13.0;
 
 // economic expansion timer
 Q.economic_expansion = 0;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['nlp', 'kpd', 'spd', 'ddp', 'z', 'dnvp', 'dap', 'other'];
+Q.parties = ['nlp', 'kpd', 'uspd', 'spd', 'fvp', 'z', 'dnvp', 'dap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_spd = 60;
+Q.workers_uspd = 20;
 Q.workers_kpd = 20;
 Q.workers_z = 5;
-Q.workers_ddp = 0;
+Q.workers_fvp = 0;
 Q.workers_nlp = 0;
 Q.workers_dnvp = 5;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
 
 Q.old_middle_spd = 5;
+Q.old_middle_uspd = 0;
 Q.old_middle_kpd = 0;
 Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
+Q.old_middle_fvp= 10;
 Q.old_middle_nlp = 25;
 Q.old_middle_dnvp = 25;
 Q.old_middle_nsdap = 10;
 Q.old_middle_other = 10;
 
 Q.new_middle_spd = 5;
+Q.new_middle_uspd = 5;
 Q.new_middle_kpd = 1;
 Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
+Q.new_middle_fvp= 25;
 Q.new_middle_nlp = 25;
 Q.new_middle_dnvp = 10;
 Q.new_middle_nsdap = 5;
 Q.new_middle_other = 15;
 
+Q.rural_uspd = 5;
 Q.rural_spd = 10;
 Q.rural_kpd = 0;
 Q.rural_z = 5;
-Q.rural_ddp= 5;
+Q.rural_fvp= 5;
 Q.rural_nlp = 15;
 Q.rural_dnvp = 45;
 Q.rural_nsdap = 5;
 Q.rural_other = 10;
 
+Q.unemployed_uspd = 40;
 Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
+Q.unemployed_kpd = 30;
 Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
+Q.unemployed_fvp = 0;
 Q.unemployed_nlp = 0;
 Q.unemployed_dnvp = 5;
 Q.unemployed_nsdap = 15;
 Q.unemployed_other = 9;
 
+Q.catholics_uspd = 5;
 Q.catholics_spd = 15;
-Q.catholics_kpd = 2;
+Q.catholics_kpd = 0;
 Q.catholics_z = 50;
-Q.catholics_ddp = 0;
+Q.catholics_fvp = 0;
 Q.catholics_nlp = 5;
 Q.catholics_dnvp = 5;
 Q.catholics_nsdap = 0;
@@ -225,36 +226,20 @@ Q.catholics_other = 12;
 
 
 // Current Reichstag composition
-// % of Reichstag in Jan 1928
-// source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
+Q.uspd_r = 26;
 Q.spd_r = 26;
 Q.kpd_r = 9;
 Q.z_r = 17;
-Q.ddp_r = 6;
+Q.fvp_r = 6;
 Q.nlp_r = 10;
 Q.dnvp_r = 20;
 Q.nsdap_r = 3;
 Q.other_r = 9;
 
-// diff from prev
-Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_nlp_r = 10;
-Q.old_dnvp_r = 20;
-Q.old_nsdap_r = 3;
-Q.old_other_r = 9;
+// isn't formed yet, but may be formed
+Q.wp_r = 0;
 
-// sapd isn't formed yet, but it may be formed
-Q.sapd_r = 0;
-Q.old_sapd_r = 0;
 
-// for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -265,13 +250,14 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
-Q.chancellor = "Marx";
-Q.chancellor_party = 'Z';
-Q.spd_in_government = 0;
-Q.z_in_government = 0;
-Q.ddp_in_government = 0;
+Q.president = "Ebert";
+Q.president_party = "SPD";
+Q.chancellor = "Müller";
+Q.chancellor_party = 'SPD';
 Q.nlp_in_government = 0;
+Q.spd_in_government = 1;
+Q.z_in_government = 1;
+Q.fvp_in_government = 1;
 Q.dnvp_in_government = 0;
 Q.kpd_in_government = 0;
 Q.dap_in_government = 0;
@@ -286,28 +272,31 @@ Q.coalition_dissent = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-Q.foreign_minister = 'Stresemann';
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'DVP';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+Q.foreign_minister = 'Müller';
+Q.foreign_minister_party = 'SPD';
+Q.interior_minister = 'Wirth';
+Q.interior_minister_party = 'Z';
+Q.justice_minister = 'Blunck';
+Q.justice_minister_party = 'FVP';
+Q.finance_minister = 'Hilferding';
+Q.finance_minister_party = 'SPD';
+Q.economic_minister = 'Schmidt';
+Q.economic_minister_party = 'SPD';
+Q.labor_minister = 'Wissel';
+Q.labor_minister_party = 'SPD';
+Q.agriculture_minister = 'Hermes';
+Q.agriculture_minister_party = 'Z';
+Q.reichswehr_minister = 'Gessler';
+Q.reichswehr_minister_party = 'FVP';
+
+Q.reichsbank_president = "Schacht";
+Q.reichsbank_president_party = 'NLP';
 
 // Events: what has occurred?
 
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;
-// level of welfare relative to 1928 (can go negative)
+// level of welfare relative to 1922 (can go negative)
 Q.welfare = 0;
 // Relations with the Western countries (France, UK).
 Q.west_relation = 0;
@@ -319,7 +308,7 @@ Q.soviet_relation = 0;
 Q.reparations = 0;
 Q.reparations_negotiation = 0;
 
-// Tax rates relative to 1928 baseline
+// Tax rates relative to 1922 baseline
 Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
 Q.tariffs = 0;
@@ -350,7 +339,6 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             // events
             'emergency_cuts', 'unemployment_insurance',
             'sa_ban', 'sh_ban', 'papen_chancellor',
-            'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
             'understanding_enemy', 'schleichers_schemes'];
 Q.advisor_action_timer = 0;
@@ -362,7 +350,7 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-Q.next_election_year = 1928;
+Q.next_election_year = 1924;
 Q.next_election_month = 5;
 Q.next_election_time = 5;
 // government affairs timers
@@ -425,20 +413,20 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @1928_easy: Begin (easy difficulty)
-- @1928_main: Begin (normal difficulty)
-- @1928_hard: Begin (hard difficulty)
-- @1928_historical: Begin (historical mode)
+- @1922_easy: Begin (easy difficulty)
+- @1922_main: Begin (normal difficulty)
+- @1922_hard: Begin (hard difficulty)
+- @1922_historical: Begin (historical mode)
 
-@1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
-go-to: 1928_main
+@1922_easy
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; spd_relation = 49; budget = 5;
+go-to: 1922_main
 
-@1928_hard
+@1922_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
-go-to: 1928_main
+go-to: 1922_main
 
-@1928_historical
+@1922_historical
 subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
 on-arrival: {!
 Q.difficulty = 2;
@@ -456,13 +444,13 @@ Q.dvp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
 !}
-go-to: 1928_main
+go-to: 1922_main
 
-@1928_main
+@1922_main
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 1922
 
 It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
 
