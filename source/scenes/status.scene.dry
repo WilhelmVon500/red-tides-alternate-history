@@ -103,6 +103,9 @@ Economic growth: [+ economic_growth_2 +]%
 
 @paramilitaries
 on-arrival: {!
+if (Q.jdo_strength) {
+    Q.jdo_strength_2 = Q.jdo_strength.toFixed(1);
+}
 if (Q.rb_strength) {
     Q.rb_strength_2 = Q.rb_strength.toFixed(1);
 }
@@ -119,6 +122,10 @@ if (Q.sa_strength) {
 
 = Paramilitaries
 
+{!<span class="tooltip-text" title="The Young German Order is a national liberal paramilitary organization of our party.">JDO</span>!} Strength: [+ jdo_strength_2 +] thousand
+
+JDO Militarization: [+ jdo_militancy : militancy +]
+
 {!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
 
 Reichsbanner Militarization: [+ rb_militancy : militancy +]
@@ -131,7 +138,7 @@ RFB Militarization: [+ rfb_militancy : militancy +]
 
 Stahlhelm Militarization: [+ sh_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the far-right paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
+{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the DAP's paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
 
 SA Militarization: [+ sa_militancy : militancy +]
 
