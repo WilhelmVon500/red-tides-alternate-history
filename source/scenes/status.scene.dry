@@ -55,7 +55,7 @@ Reichstag composition:
 
 {!<span class="tooltip-text" title="German Worker's Party" style="color: #096300;">!}**DAP**{!</span>!}: [+ dap_seats +] ([+ dap_r +]%)
 
-<span style="color: #909090;">**Others**</span>: [+ other_r +]%
+<span style="color: #909090;">**Others**</span>: [+ other_seats +] ([+ other_r +]%)
 
 [? if nlp_in_government: Budget: [+ budget +] ?]
 
