@@ -98,17 +98,22 @@ Q.prussia_leader_party = "SPD";
 Q.jdo_strength = 100;
 Q.jdo_militancy = 0.2;
 Q.jdo_banned = 0;
-Q.rb_strength = 2000;
-Q.rb_militancy = 0.01;
+
+Q.rb_exist = 0;
+Q.rb_strength = 0;
+Q.rb_militancy = 0;
 Q.rb_banned = 0;
+
 Q.sh_strength = 500;
 Q.sh_militancy = 0.5;
 Q.sh_banned = 0;
 Q.sh_banned_prussia = 0;
+
 Q.sa_strength = 80;
 Q.sa_militancy = 0.5;
 Q.sa_banned = 0;
 Q.sa_banned_prussia = 0;
+
 Q.rfb_strength = 130;
 Q.rfb_militancy = 0.5;
 Q.rfb_banned = 0;
@@ -162,7 +167,7 @@ Q.economic_growth = 13.0;
 Q.economic_expansion = 0;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['nlp', 'kpd', 'uspd', 'spd', 'fvp', 'z', 'dnvp', 'dap', 'other'];
+Q.parties = ['nlp', 'kpd', 'uspd', 'spd', 'fvp', 'z', 'wp', 'rlb', 'dnvp', 'dap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -248,6 +253,8 @@ Q.spd_seats = 115;
 Q.fvp_seats = 27;
 Q.z_seats = 83;
 Q.nlp_seats = 60;
+Q.wp_seats = 0;
+Q.rlb_seats = 0;
 Q.dnvp_seats = 67;
 Q.dap_seats = 0;
 Q.other_seats = 11;
@@ -258,16 +265,14 @@ Q.spd_r = 25.1;
 Q.fvp_r = 5.9;
 Q.z_r = 18.1;
 Q.nlp_r = 13.1;
+Q.wp_r = 0;
+Q.rlb_r = 0;
 Q.dnvp_r = 14.6;
 Q.dap_r = 0;
 Q.other_r = 2.3;
 
 // isn't formed yet, but may be formed
-Q.wp_seats = 0;
-Q.rlb_seats = 0;
 
-Q.wp_r = 0;
-Q.rlb_r = 0;
 
 
 
@@ -440,11 +445,11 @@ Creator of the mod does not support or justify extremist ideologies. This mod is
 - @1922_historical: Begin (historical mode)
 
 @1922_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; spd_relation = 49; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; jdo_strength = 125; kpd_relation = 29; z_relation = 54; spd_relation = 49; budget = 5;
 go-to: 1922_main
 
 @1922_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; jdo_strength = 70; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
 go-to: 1922_main
 
 @1922_historical
@@ -454,7 +459,7 @@ Q.difficulty = 2;
 Q.historical_mode = 1;
 Q.resources = 2;
 Q.dues = 1;
-Q.rb_strength = 2000;
+Q.jdo_strength = 100;
 Q.reformist_dissent = 25;
 Q.left_dissent = 30;
 Q.labor_dissent = 25;
