@@ -37,25 +37,25 @@ Reichstag composition:
 
 {!<span class="tooltip-text" title="National Liberal Party" style="color: var(--nlp-color);">!}**NLP**{!</span>!}: [+ nlp_seats +] ([+ nlp_r +]%)
 
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_seats +] ([+ kpd_r +]%)
+{!<span class="tooltip-text" title="Communist Party of Germany">!}**KPD**{!</span>!}: [+ kpd_seats +] ([+ kpd_r +]%)
 
-[? if uspd_exist: {!<span class="tooltip-text" title="Independent Social Democratic Party of Germany">USPD</span>!}: [+ uspd_seats +] ([+ uspd_r +]%) ?]
+[? if uspd_exist: {!<span class="tooltip-text" title="Independent Social Democratic Party of Germany">!}**USPD**{!</span>!}: [+ uspd_seats +] ([+ uspd_r +]%) ?]
 
-{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_seats +] ([+ spd_r +]%)
+{!<span class="tooltip-text" title="Social Democratic Party of Germany">!}**SPD**{!</span>!}: [+ spd_seats +] ([+ spd_r +]%)
 
-{!<span class="tooltip-text" title="Progressive People's Party">!}FVP{!</span>!}: [+ fvp_seats +] ([+ fvp_r +]%)
+{!<span class="tooltip-text" title="Progressive People's Party">!}**FVP**{!</span>!}: [+ fvp_seats +] ([+ fvp_r +]%)
 
-{!<span class="tooltip-text" title="Center Party + Bavarian People's Party">Z + BVP</span>!}: [+ z_seats +] ([+ z_r +]%)
+{!<span class="tooltip-text" title="Center Party + Bavarian People's Party">!}**Z** + **BVP**{!</span>!}: [+ z_seats +] ([+ z_r +]%)
 
-[? if wp_exist: {!<span class="tooltip-text" title="Economic Party">WP</span>!}: [+ wp_seats +] ([+ wp_r +]%) ?]
+[? if wp_exist: {!<span class="tooltip-text" title="Economic Party">!}**WP**{!</span>!}: [+ wp_seats +] ([+ wp_r +]%) ?]
 
-[? if rlb_exist: {!<span class="tooltip-text" title="Imperial Rural League">RLB</span>!}: [+ rlb_seats +] ([+ rlb_r +]%) ?]
+[? if rlb_exist: {!<span class="tooltip-text" title="Imperial Rural League">!}**RLB**{!</span>!}: [+ rlb_seats +] ([+ rlb_r +]%) ?]
 
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_seats +] ([+ dnvp_r +]%)
+{!<span class="tooltip-text" title="German National People's Party">!}**DNVP**{!</span>!}: [+ dnvp_seats +] ([+ dnvp_r +]%)
 
-{!<span class="tooltip-text" title="German Worker's Party">DAP</span>!}: [+ dap_seats +] ([+ dap_r +]%)
+{!<span class="tooltip-text" title="German Worker's Party">!}**DAP**{!</span>!}: [+ dap_seats +] ([+ dap_r +]%)
 
-Others: [+ other_r +]%
+**Others**: [+ other_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
@@ -82,21 +82,21 @@ Reichsbank President: [+ reichsbank_president +] ([+ reichsbank_president_party 
 
 {!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_relation : relationships +]
 
-[? if uspd_exist: {!<span class="tooltip-text" title="Independent Social Democratic Party of Germany">USPD</span>!}: [+ uspd_relation : relationships +] ?]
+[? if uspd_exist: {!<span class="tooltip-text" title="Independent Social Democratic Party of Germany">!}**USPD**{!</span>!}: [+ uspd_relation : relationships +] ?]
 
-{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_relation : relationships +]
+{!<span class="tooltip-text" title="Social Democratic Party of Germany">!}**SPD**{!</span>!}: [+ spd_relation : relationships +]
 
-{!<span class="tooltip-text" title="Progressive People's Party">!}FVP{!</span>!}: [+ fvp_relation : relationships +]
+{!<span class="tooltip-text" title="Progressive People's Party">!}**FVP**{!</span>!}: [+ fvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Center Party">!}**Z**{!</span>!}: [+ z_relation : relationships +]
 
-[? if wp_exist: {!<span class="tooltip-text" title="Economic Party">WP</span>!}: [+ wp_relation : relationships +] ?]
+[? if wp_exist: {!<span class="tooltip-text" title="Economic Party">!}**WP**{!</span>!}: [+ wp_relation : relationships +] ?]
 
-[? if rlb_exist: {!<span class="tooltip-text" title="Imperial Rural League">RLB</span>!}: [+ rlb_relation : relationships +] ?]
+[? if rlb_exist: {!<span class="tooltip-text" title="Imperial Rural League">!}**RLB**{!</span>!}: [+ rlb_relation : relationships +] ?]
 
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
+{!<span class="tooltip-text" title="German National People's Party">!}**DNVP**{!</span>!}: [+ dnvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Worker's Party">DAP</span>!}: [+ dap_relation : relationships +]
+{!<span class="tooltip-text" title="German Worker's Party">!}**DAP**{!</span>!}: [+ dap_relation : relationships +]
 
 = Internal Factions of the <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>
 
@@ -107,8 +107,6 @@ Reichsbank President: [+ reichsbank_president +] ([+ reichsbank_president_party 
 {!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
 {!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
-
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
 
 @paramilitaries
