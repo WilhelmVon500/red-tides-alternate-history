@@ -85,6 +85,7 @@ Q.nlp_color = "#98C22C";
 
 Q.uspd_exist = 1;
 Q.wp_exist = 0;
+Q.rlb_exist = 0;
 
 
 Q.nlp_prussia = 1;
@@ -224,18 +225,34 @@ Q.catholics_other = 12;
 
 
 // Current Reichstag composition
-Q.kpd_r = 9;
-Q.uspd_r = 26;
-Q.spd_r = 26;
-Q.fvp_r = 6;
-Q.z_r = 17;
-Q.nlp_r = 10;
-Q.dnvp_r = 20;
-Q.dap_r = 3;
-Q.other_r = 9;
+Q.reichstag_size = 4.59;
+
+Q.kpd_seats = 4;
+Q.uspd_seats = 92;
+Q.spd_seats = 115;
+Q.fvp_seats = 27;
+Q.z_seats = 83;
+Q.nlp_seats = 60;
+Q.dnvp_seats = 67;
+Q.dap_seats = 0;
+Q.other_seats = 11;
+
+Q.kpd_r = 0.9;
+Q.uspd_r = 20.0;
+Q.spd_r = 25.1;
+Q.fvp_r = 5.9;
+Q.z_r = 18.1;
+Q.nlp_r = 13.1;
+Q.dnvp_r = 14.6;
+Q.dap_r = 0;
+Q.other_r = 2.3;
 
 // isn't formed yet, but may be formed
+Q.wp_seats = 0;
+Q.rlb_seats = 0;
+
 Q.wp_r = 0;
+Q.rlb_r = 0;
 
 
 
