@@ -94,7 +94,10 @@ Q.prussia_leader_party = "SPD";
 
 // The array of forces - paramilitary groups
 // Number of members in 1922 (in thousands)
-// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
+// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund, JDO
+Q.jdo_strength = 100;
+Q.jdo_militancy = 0.2;
+Q.jdo_banned = 0;
 Q.rb_strength = 2000;
 Q.rb_militancy = 0.01;
 Q.rb_banned = 0;
