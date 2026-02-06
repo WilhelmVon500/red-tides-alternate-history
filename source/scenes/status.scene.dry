@@ -98,6 +98,28 @@ Reichsbank President: [+ reichsbank_president +] ([?if reichsbank_president_part
 
 {!<span class="tooltip-text" title="German Worker's Party" style="color: #096300;">!}**DAP**{!</span>!}: [+ dap_relation : relationships +]
 
+= Party Leadership
+
+{!<span class="tooltip-text" title="National Liberal Party" style="color: var(--nlp-color);">!}**NLP**{!</span>!}: National Liberalism ([+nlp_leader+])
+
+{!<span class="tooltip-text" title="Communist Party of Germany" style="color: #8B0000;">!}**KPD**{!</span>!}: Marxism-Leninism (Brandler)
+
+[? if uspd_exist: {!<span class="tooltip-text" title="Independent Social Democratic Party of Germany" style="color: #D47B9B;">!}**USPD**{!</span>!}: Centrist Marxism (Haase) ?]
+
+{!<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #E3000F;">!}**SPD**{!</span>!}: Democratic Socialism (Müller)
+
+{!<span class="tooltip-text" title="Progressive People's Party" style="color: #FFD800;">!}**FVP**{!</span>!}: Left Liberalism (Fischbeck)
+
+{!<span class="tooltip-text" title="Center Party" style="color: #000000;">!}**Z**{!</span>!}: Centre to Centre-Left ([+z_leader+])
+
+[? if wp_exist: {!<span class="tooltip-text" title="Economic Party" style="color: #B8996F;">!}**WP**{!</span>!}: Liberal Conservatism (Drewitz) ?]
+
+[? if rlb_exist: {!<span class="tooltip-text" title="Imperial Rural League" style="color: #52AE6F;">!}**RLB**{!</span>!}: Agrarian Conservatism (Hepp) ?]
+
+{!<span class="tooltip-text" title="German National People's Party" style="color: #3F7BC1;">!}**DNVP**{!</span>!}: National Conservatism (Westarp)
+
+{!<span class="tooltip-text" title="German Worker's Party" style="color: #096300;">!}**DAP**{!</span>!}: Völkisch Nationalism (Drexler)
+
 = Internal Factions of the <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
