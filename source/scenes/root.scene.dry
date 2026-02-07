@@ -79,7 +79,7 @@ Q.dnvp_relation = 30;
 Q.dap_relation = 0;
 
 Q.kpd_leader = "Brandler";
-Q.z_leader = "Trimborn";
+Q.z_leader = "Marx";
 Q.dap_leader = "Drexler";
 
 Q.nlp_leader = "Stresemann";
