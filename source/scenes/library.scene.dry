@@ -314,7 +314,6 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 @figures
 title: Figures and Charts
 go-to: menu
-on-arrival: z_minus_bvp_r = z_r - 3.7; z_minus_bvp_seats = z_seats - 17; bvp_r = 3.7; bvp_seats = 17;
 on-display: {!
 data = []
 if (Q.kpd_seats) {
@@ -368,8 +367,8 @@ if (Q.bvp_seats) {
 if (Q.nlp_seats) {
     data.push({
         "id": "nlp",
-        "legend": nlp_name,
-        "name": nlp_name,
+        "legend": Q.nlp_name,
+        "name": Q.nlp_name,
         "seats": Math.round(Q.nlp_seats),
     });
 }
@@ -432,8 +431,8 @@ if (d3 && window) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'spd': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'kpd': '#8B0000', 'uspd': '#D47B9B', 'spd': '#E3000F', fvp: '#FFD800', 'z': '#000000', 'nlp': Q.nlp_color, 'wp': '#B8996F'; 'rlb': '#52AE6F', 'other': '#909090', 'dnvp': '#3F7BC1', 'dap': '#096300'},
+            {'kpd': 'KPD', 'uspd': 'USPD', 'spd': 'SPD', fvp: 'FVP', 'z': 'Z + BVP', 'nlp': Q.nlp_name, 'wp': 'WP'; 'rlb': 'RLB', 'other': 'Others', 'dnvp': 'DNVP', 'dap': 'DAP'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     if (Q.election_records.length > 0) {
@@ -445,8 +444,8 @@ if (d3 && window) {
     if (!Q.historical_mode || Q.game_over) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'spd': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'kpd': '#8B0000', 'uspd': '#D47B9B', 'spd': '#E3000F', fvp: '#FFD800', 'z': '#000000', 'nlp': Q.nlp_color, 'wp': '#B8996F'; 'rlb': '#52AE6F', 'other': '#909090', 'dnvp': '#3F7BC1', 'dap': '#096300'},
+            {'kpd': 'KPD', 'uspd': 'USPD', 'spd': 'SPD', fvp: 'FVP', 'z': 'Z + BVP', 'nlp': Q.nlp_name, 'wp': 'WP'; 'rlb': 'RLB', 'other': 'Others', 'dnvp': 'DNVP', 'dap': 'DAP'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
