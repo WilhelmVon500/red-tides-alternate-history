@@ -315,8 +315,8 @@ Q.coalition_dissent = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-Q.foreign_minister = 'Müller';
-Q.foreign_minister_party = 'SPD';
+Q.foreign_minister = 'Rathenau';
+Q.foreign_minister_party = 'FVP';
 Q.interior_minister = 'Wirth';
 Q.interior_minister_party = 'Z';
 Q.justice_minister = 'Blunck';
