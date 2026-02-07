@@ -69,7 +69,7 @@ Inflation: [+ inflation_2 +]%
 
 Economic growth: [+ economic_growth_2 +]%
 
-Reichsbank President: [+ reichsbank_president +] ([?if reichsbank_president_party == nlp_name: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>?])
+Reichsbank President: [+ reichsbank_president +] ([?if reichsbank_president_party == "I": <span style="color: #909090;">**I**</span>?][?if reichsbank_president_party == nlp_name: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>?])
 
 
 
