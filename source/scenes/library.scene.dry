@@ -40,7 +40,7 @@ go-to: menu
 
 **1914**: The Great War begins. The <span style="color: #E3000F;">**SPD**</span> votes in favor of war credits, with substantial internal dissent. This begins a policy of *Burgfriedenspolitik*, a general peace between all political parties and trade unions.
 
-**1918**: Following defeats in the war and uprisings by soldiers, sailors, and workers, Kaiser Wilhelm II abdicates from his throne. Prince Max von Baden takes power as the regent. An armistice is declared, ending the Great War. Conflict between center-left social democrats and far-left radicals erupts in the streets of Berlin and elsewhere. Chancellor von Baden is pressured to declare the Republic and include <span style="color: #E3000F;">Social Democrats</span> in his government.
+**1918**: Following defeats in the war and uprisings by soldiers, sailors, and workers, Kaiser Wilhelm II abdicates from his throne. Prince Max von Baden remains Chancellor as head of the transitional government. An armistice is declared, ending the Great War. Conflict between center-left social democrats and far-left radicals erupts in the streets of Berlin and elsewhere. Chancellor von Baden is pressured to declare the Republic and include <span style="color: #E3000F;">Social Democrats</span> in his government.
 
 **1919**: The Spartacist Uprising, in which communist workers attempt to seize control of government, is launched. The uprising is defeated by the government, with the support of the Freikorps. Friedrich Ebert is elected President and Max von Baden is replaced with Philipp Scheidemann, a <span style="color: #E3000F;">Social Democrat</span>. The Treaty of Versailles is signed under great protest from all political factions in Germany, officially ending the Great War. The Weimar Constitution is signed. The first "Weimar Coalition" government is formed.
 
@@ -134,10 +134,6 @@ go-to: election_algorithm
 set-jump: election_projections
 
 **Public Opinion**
-
-#Support for Socialism: [+ socialism +]%
-
-#Support for Nationalism: [+ nationalism +]%
 
 Support for the Republic: [+ pro_republic_disp +]%
 
