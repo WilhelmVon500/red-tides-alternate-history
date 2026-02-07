@@ -162,7 +162,7 @@ Q.rural = 25; // agriculture and forestry employment... but many of those are pr
 Q.unemployed = 1.1;
 Q.catholics = 30;
 
-Q.inflation = 0.0;
+Q.inflation = 175.0;
 
 Q.economic_growth = 13.0;
 
