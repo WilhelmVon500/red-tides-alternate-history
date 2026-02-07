@@ -146,45 +146,41 @@ go-to: menu
 
 **Projected election results** (if the election were to be held now):
 
-# 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_votes +]%
+<span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: **[+ nlp_votes +]%**
 
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
+<span style="color: #8B0000;">**KPD**</span>: [+ kpd_votes +]%
 
-# 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_votes +]%
+[? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ uspd_votes +]% ?]
 
-# 1928: 10, 1930: 13
-KPD: [+ kpd_votes +]%
+<span style="color: #E3000F;">**SPD**</span>: [+ spd_votes +]%
 
-# 1928: 5, 1930: 4 (as DstP)
-[+ ddp_name +]: [+ ddp_votes +]%
+<span style="color: #FFD800;">**FVP**</span>: [+ fvp_votes +]%
 
-# 1928: 9, 1930: 5
-DVP: [+ dvp_votes +]%
+<span style="color: #000000;">**Z**</span> + <span style="color: #69A2BE;">**BVP**</span>: [+ z_votes +]%
 
-# 1928: 14, 1930: 7
-DNVP: [+ dnvp_votes +]%
+[? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ wp_votes +]% ?]
 
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_votes +]%
+[? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ rlb_votes +]% ?]
 
-# 1928: 9, 1930: 10
-Others: [+ other_votes +]%
+<span style="color: #3F7BC1;">**DNVP**</span>: [+ dnvp_votes +]%
+
+<span style="color: #096300;">**DAP**</span>: [+ dap_votes +]%
+
+<span style="color: #909090;">**Others**</span>: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [+ ddp_name +]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ workers_nlp_display +]%, <span style="color: #8B0000;">**KPD**</span>: [+ workers_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ workers_uspd_display +]%, ?]<span style="color: #E3000F;">**SPD**</span>: [+ workers_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ workers_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ workers_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ workers_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ workers_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ workers_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ workers_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ workers_other_display +]%
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [+ ddp_name +]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ new_middle_nlp_display +]%, <span style="color: #8B0000;">**KPD**</span>: [+ new_middle_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ new_middle_uspd_display +]%, ?]<span style="color: #E3000F;">**SPD**</span>: [+ new_middle_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ new_middle_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ new_middle_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ new_middle_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ new_middle_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ new_middle_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ new_middle_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ new_middle_other_display +]%
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [+ ddp_name +]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ old_middle_nlp_display +]%, <span style="color: #8B0000;">**KPD**</span>: [+ old_middle_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ old_middle_uspd_display +]%, ?]<span style="color: #E3000F;">**SPD**</span>: [+ old_middle_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ old_middle_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ old_middle_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ old_middle_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ old_middle_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ old_middle_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ old_middle_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ old_middle_other_display +]%
 
-Rural: SPD: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [+ ddp_name +]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ rural_nlp_display +]%, <span style="color: #8B0000;">**KPD**</span>: [+ rural_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ rural_uspd_display +]%, ?]<span style="color: #E3000F;">**SPD**</span>: [+ rural_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ rural_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ rural_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ rural_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ rural_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ rural_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ rural_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ rural_other_display +]%
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [+ ddp_name +]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ unemployed_nlp_display +]%, <span style="color: #8B0000;">**KPD**</span>: [+ unemployed_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ unemployed_uspd_display +]%, ?]<span style="color: #E3000F;">**SPD**</span>: [+ unemployed_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ unemployed_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ unemployed_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ unemployed_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ unemployed_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ unemployed_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ unemployed_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ unemployed_other_display +]%
 
-Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [+ ddp_name +]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: <span style="color: var(--nlp-color);">**[+ nlp_name +]**</span>: [+ catholics_nlp_display +]%, <span style="color: #8B0000;">**KPD**</span>: [+ catholics_kpd_display +]%, [? if uspd_exist: <span style="color: #D47B9B;">**USPD**</span>: [+ catholics_uspd_display +]%, ?]<span style="color: #E3000F;">**SPD**</span>: [+ catholics_spd_display +]%, <span style="color: #FFD800;">**FVP**</span>: [+ catholics_fvp_display +]%, <span style="color: #000000;">**Z**</span>: [+ catholics_z_display +]%, [? if wp_exist: <span style="color: #B8996F;">**WP**</span>: [+ catholics_wp_display +]%, ?][? if rlb_exist: <span style="color: #52AE6F;">**RLB**</span>: [+ catholics_rlb_display +]%, ?]<span style="color: #3F7BC1;">**DNVP**</span>: [+ catholics_dnvp_display +]%, <span style="color: #096300;">**DAP**</span>: [+ catholics_dap_display +]%, <span style="color: #909090;">**Others**</span>: [+ catholics_other_display +]%
 
 @parties
 go-to: menu
@@ -212,13 +208,11 @@ Current relations: [+ dnvp_relation : relationships +]
 
 Current relations: [+ kpd_relation : relationships +]
 
-[? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Germany) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and KPD. ?]
+**DAP** - *Deutsche Arbeiterpartei* - (German Worker's Party) - WIP
 
-**NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
+Current relations: [+ dap_relation : relationships +]
 
-Current relations: [+ nsdap_relation : relationships +]
-
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the DVP and DNVP. 
+**Other parties** - there is a multitude of small, mostly conservative parties. Their political position usually lies between us and the DNVP. 
 
 @paramilitaries
 on-arrival: {!
