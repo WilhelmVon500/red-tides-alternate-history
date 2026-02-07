@@ -314,73 +314,106 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 @figures
 title: Figures and Charts
 go-to: menu
-on-arrival: z_minus_bvp_r = z_r - 3;
+on-arrival: z_minus_bvp_r = z_r - 3.7; z_minus_bvp_seats = z_seats - 17; bvp_r = 3.7; bvp_seats = 17;
 on-display: {!
-data = [
-    {
+data = []
+if (Q.kpd_seats) {
+    data.push({
         "id": "kpd",
         "legend": "KPD",
         "name": "KPD",
-        "seats": Q.kpd_r*5,
-    }];
-if (Q.sapd_formed && Q.sapd_r) {
-    data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
-            });
+        "seats": Math.round(Q.kpd_seats),
+    });
 }
-data = data.concat([
-    {
+if (Q.uspd_exist && Q.uspd_seats) {
+    data.push({
+        "id": "uspd",
+        "legend": "USPD",
+        "name": "USPD",
+        "seats": Math.round(Q.uspd_seats),
+    });
+}
+if (Q.spd_seats) {
+    data.push({
         "id": "spd",
         "legend": "SPD",
         "name": "SPD",
-        "seats": Q.spd_r*5,
-    },
-    {
-        "id": "ddp",
-        "legend": "DDP",
-        "name": "DDP",
-        "seats": Q.ddp_r*5,
-    },
-    {
+        "seats": Math.round(Q.spd_seats),
+    });
+}
+if (Q.fvp_seats) {
+    data.push({
+        "id": "fvp",
+        "legend": "FVP",
+        "name": "FVP",
+        "seats": Math.round(Q.fvp_seats),
+    });
+}
+if (Q.z_minus_bvp_seats) {
+    data.push({
         "id": "z",
         "legend": "Center",
         "name": "Center",
-        "seats": (Q.z_r - 3)*5,
-    },
-    {
+        "seats": Math.round(Q.z_minus_bvp_seats),
+    });
+}
+if (Q.bvp_seats) {
+    data.push({
         "id": "bvp",
         "legend": "BVP",
         "name": "BVP",
-        "seats": 3*5,
-    },
-    {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Q.dvp_r*5,
-    },
-    {
+        "seats": Math.round(Q.bvp_seats),
+    });
+}
+if (Q.nlp_seats) {
+    data.push({
+        "id": "nlp",
+        "legend": nlp_name,
+        "name": nlp_name,
+        "seats": Math.round(Q.nlp_seats),
+    });
+}
+if (Q.wp_exist && Q.wp_seats) {
+    data.push({
+        "id": "wp",
+        "legend": "WP",
+        "name": "WP",
+        "seats": Math.round(Q.wp_seats),
+    });
+}
+if (Q.rlb_exist && Q.rlb_seats) {
+    data.push({
+        "id": "rlb",
+        "legend": "RLB",
+        "name": "RLB",
+        "seats": Math.round(Q.rlb_seats),
+    });
+}
+if (Q.other_seats) {
+    data.push({
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Q.other_r*5,
-    },
-    {
+        "seats": Math.round(Q.other_seats),
+    });
+}
+if (Q.dnvp_seats) {
+    data.push({
         "id": "dnvp",
         "legend": "DNVP",
         "name": "DNVP",
-        "seats": Q.dnvp_r*5,
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Q.nsdap_r*5,
-    },
-]);
+        "seats": Math.round(Q.dnvp_seats),
+    });
+}
+if (Q.dap_seats) {
+    data.push({
+        "id": "dap",
+        "legend": "DAP",
+        "name": "DAP",
+        "seats": Math.round(Q.dap_seats),
+    });
+}
+
 if (d3 && window) {
     // get screen width
     var width = 500;
