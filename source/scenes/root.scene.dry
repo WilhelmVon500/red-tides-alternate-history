@@ -332,8 +332,8 @@ Q.agriculture_minister_party = 'Z';
 Q.reichswehr_minister = 'Gessler';
 Q.reichswehr_minister_party = 'FVP';
 
-Q.reichsbank_president = "Schacht";
-Q.reichsbank_president_party = 'NLP';
+Q.reichsbank_president = 'Havenstein';
+Q.reichsbank_president_party = 'I';
 
 // Events: what has occurred?
 
